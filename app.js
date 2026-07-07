@@ -1,5 +1,7 @@
-// Fix for Indian ISP DNS SRV blocking issue
-require('dns').setServers(['8.8.8.8', '8.8.4.4']);
+// Fix for Indian ISP DNS SRV blocking issue (only locally, not on Render)
+if (!process.env.RENDER) {
+    require('dns').setServers(['8.8.8.8', '8.8.4.4']);
+}
 
 if(process.env.NODE_ENV != "production") {
     require("dotenv").config();
