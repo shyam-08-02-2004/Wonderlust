@@ -26,7 +26,12 @@ const validateListing = (req, res, next) => {
 
 // ================= INDEX =================
 router.get("/", wrapAsync(async (req, res) => {
-    const allListings = await Listing.find({});
+    const { category } = req.query;
+    let query = {};
+    if (category) {
+        query.category = category;
+    }
+    const allListings = await Listing.find(query);
     res.render("listings/index", { allListings });
 }));
 
