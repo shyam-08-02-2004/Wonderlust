@@ -140,3 +140,21 @@ body{
     margin-bottom: 0.5rem;
 }
 
+/* Profile Menu Button */
+.profile-menu-btn {
+    border: 1px solid #dddddd !important;
+    background-color: white !important;
+    transition: box-shadow 0.2s ease;
+}
+
+.profile-menu-btn:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18) !important;
+}
+
+.hover-bg-light:hover {
+    background-color: #f7f7f7;
+}
+
+.profile-dropdown-menu .dropdown-item:hover {
+    background-color: #f7f7f7;
+}
